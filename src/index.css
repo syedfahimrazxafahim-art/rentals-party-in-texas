@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-deep: #0d0221;
+    --color-neon-pink: #ff00e6;
+    --color-neon-cyan: #00f5ff;
+    --color-neon-green: #39ff14;
+    --color-neon-purple: #240046;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0d0221;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Syne', sans-serif;
+  }
+
+  .font-marker {
+    font-family: 'Permanent Marker', cursive;
+  }
+}
+
+/* Custom neon glow utilities */
+.glow-pink {
+  box-shadow: 0 0 15px rgba(255, 0, 230, 0.7), 0 0 30px rgba(255, 0, 230, 0.3);
+}
+
+.glow-pink-text {
+  text-shadow: 0 0 10px #ff00e6, 0 0 20px rgba(255, 0, 230, 0.6);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.7), 0 0 30px rgba(0, 245, 255, 0.3);
+}
+
+.glow-cyan-text {
+  text-shadow: 0 0 10px #00f5ff, 0 0 20px rgba(0, 245, 255, 0.6);
+}
+
+.glow-green {
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.7), 0 0 25px rgba(57, 255, 20, 0.3);
+}
+
+.glow-green-text {
+  text-shadow: 0 0 8px #39ff14, 0 0 18px rgba(57, 255, 20, 0.6);
+}
+
+.glow-card {
+  background: #1a0b2e;
+  border: 1.5px solid rgba(255, 0, 230, 0.4);
+  box-shadow: 0 0 30px rgba(255, 0, 230, 0.15);
+}
+
+.glow-card-cyan {
+  background: #0f1035;
+  border: 1.5px solid rgba(0, 245, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.15);
+}
+
+/* Water ripple animation */
+@keyframes waterWave {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes waterFloat {
+  0% { transform: translateY(0px) rotate(-0.5deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-0.5deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 10px #00f5ff); }
+  50% { opacity: 1; filter: drop-shadow(0 0 20px #ff00e6); }
+}
+
+.animate-boat-float {
+  animation: waterFloat 5s ease-in-out infinite;
+}
+
+.animate-water-wave {
+  animation: waterWave 3.5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0221;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff00e6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f5ff;
+}

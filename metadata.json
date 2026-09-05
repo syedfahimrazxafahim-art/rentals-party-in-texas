@@ -1,0 +1,6 @@
+{
+  "name": "Texas Flo Boat Rental",
+  "description": "Dallas-Fort Worth's premier luxury party pontoon boat rentals, sunset cruises, and vibrant neon glow lake parties.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
